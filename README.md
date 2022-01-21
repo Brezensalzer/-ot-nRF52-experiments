@@ -16,7 +16,7 @@
 * [Adafruit ItsyBitsy nRF52840 Express](https://learn.adafruit.com/adafruit-itsybitsy-nrf52840-express)
 * [Adafruit MS8607 Temperatur/Humidity/Pressure sensor](https://learn.adafruit.com/adafruit-te-ms8607-pht-sensor)
 
-## Building and flashing the OpenThread Formware
+## Building and flashing the OpenThread Firmware
 Read: [flash-nrf52840-mdk-dongle.md](./flash-nrf52840-mdk-dongle.md)
 
 ## Install the OpenThread Border Router on Raspberry Pi/Debian x86
