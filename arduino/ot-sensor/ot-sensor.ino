@@ -148,15 +148,15 @@ void loop() {
   humidity_sensor->getEvent(&humidity);
 
   // format JSONmessage
-  message = "{ CurrentTemperature: ";
+  message = "{CurrentTemperature: ";
   message.concat(temp.temperature);
-  message.concat(", CurrentRelativeHumidity:");
+  message.concat(", CurrentRelativeHumidity: ");
   message.concat(humidity.relative_humidity);
   message.concat(", CurrentPressure: ");
   message.concat(pressure.pressure);
   message.concat(", Alive: ");
   message.concat(++seq_id);
-  message.concat(" }");
+  message.concat("}");
 
   if (DEBUG) {
     Serial.print("Send to [");
