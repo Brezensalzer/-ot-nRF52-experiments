@@ -9,7 +9,7 @@ done
 > netdata register
 done
 > prefix
-2000:0:0:0::/64 paros med 8000
+2000::/64 paros med 8000
 Done
 > ipaddr
 2000:0:0:0:bfab:570f:5a27:8f40  => Global Unicast Address GUA
