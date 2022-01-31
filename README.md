@@ -28,7 +28,7 @@ Read: [commissioning-cli.md](./commissioning-cli.md)
 ## Configuring IPv6
 Read: [ot-ipv6-config.md](./ot-ipv6-config.md)
 
-## Scary: Using OpenThread on an Adafruit ItsyBitsy nRF52840 Express
+## Using OpenThread on an Adafruit ItsyBitsy nRF52840 Express
 Read: [ot-nrf52-arduino.md](./ot-nrf52-arduino.md)
 
 ## Have a look at your Thread network topology in the WebGUI
