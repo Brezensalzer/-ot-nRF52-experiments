@@ -42,15 +42,23 @@ mqtt.loop()
 # ---------------------------------------------------------
 # bind to UDP socket
 # ---------------------------------------------------------
-UDP_IP = "::"     # IPv6 any address
+UDP_IP = "ff03::1"  # mesh local multicast address
 UDP_PORT = 4711
 
 sock = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM) # UDP
 sock.bind((UDP_IP, UDP_PORT))
 
 while True:
-    data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
-    message = data.decode("utf-8")
-    payload = message.rstrip('\n')
-    mqtt.publish(mqtt_topic,payload)
+    err = False
+    try:
+        data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
+    except:
+        print("error receiving message from udp socket")
+        err = True
+        continue
+    if not err:
+        message = data.decode("utf-8")
+        print("message from: ", addr)
+        payload = message.rstrip('\n')
+        mqtt.publish(mqtt_topic,payload)
     mqtt.loop()
